@@ -81,18 +81,19 @@ $subtitleTop: $spacing-4;
 }
 
 .follow{
+	display: flex;
 	overflow-x: auto;
-	white-space: nowrap;
+	// white-space: nowrap;
 	-webkit-overflow-scrolling: touch;
 	padding: 0 20%;
 	@include responsive(tab){
 		padding: 0%;
 	}
 	&__thumbnail{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		// display: flex;
+		// flex-direction: column;
+		// align-items: center;
+		// justify-content: center;
 		display: inline-block;
 		&__top{
 			display: flex;
