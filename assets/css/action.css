@@ -345,39 +345,72 @@ input, select {
 
 @media screen and (max-width: 1024px) {
   .hamburger {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     z-index: 109000;
     position: fixed;
-    top: 40px;
-    right: 20px;
+    top: 0px;
     cursor: pointer;
     width: 32px;
     height: 40px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .hamburger span {
-    -webkit-transition: all .5s;
-    transition: all .5s;
-    position: absolute;
-    left: 0;
+    background-color: white;
     width: 100%;
-    height: 2px;
-    background-color: #000000;
-    border-radius: 4px;
+    height: 60px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  .hamburger span:nth-child(1) {
-    top: 25%;
-    background-color: black;
+  .hamburger__left__img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
-  .hamburger span:nth-of-type(2) {
-    top: 50%;
-    background-color: black;
+  .hamburger__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  .hamburger span:nth-of-type(3) {
-    top: 75%;
-    background-color: black;
+  .hamburger__right__download {
+    background: -webkit-linear-gradient(0deg, #378ACE, #4EB3ED, #4EB3ED);
+    height: 100%;
+    width: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hamburger__right__download__text {
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    line-height: 2.5rem;
+    color: white;
+    font-weight: bold;
+  }
+  .hamburger__right__contact {
+    height: 100%;
+    width: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .hamburger__right__contact__text {
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    line-height: 2.5rem;
+    color: #5DA1DB;
+    font-weight: bold;
   }
 }
 
@@ -386,7 +419,7 @@ input, select {
   width: 100vw;
   height: 100vh;
   font-family: Futura, 'Century Gothic', 游ゴシック体, YuGothic;
-  background-color: gray;
+  background-color: whtie;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -639,6 +672,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 62.5%;
   font-family: "Arial", sans-serif;
   color: #273242;
+  scroll-behavior: smooth;
 }
 
 .action {
@@ -646,16 +680,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding: 64px 0;
 }
 
@@ -666,29 +699,90 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
 }
 
-.action__title {
+.action__img {
+  width: 20%;
+  padding: 1vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 480px) {
+  .action__img {
+    display: none;
+  }
+}
+
+.action__spimg {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .action__spimg {
+    display: inherit;
+    width: 60%;
+  }
+}
+
+.action__titles {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .action__titles {
+    width: 100%;
+  }
+}
+
+.action__titles__sptitle {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .action__titles__sptitle {
+    display: inline;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-top: 16px;
+  }
+}
+
+.action__titles__title {
   font-size: 3.2rem;
   letter-spacing: .55rem;
   line-height: 5rem;
-  color: white;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 800px) {
-  .action__title {
+  .action__titles__title {
     font-size: 3.2rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .action__title {
+  .action__titles__title {
     font-size: 2.4rem;
     line-height: 3.5rem;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .action__title {
+  .action__titles__title {
     font-size: 2.4rem;
     line-height: 4rem;
     text-align: center;
@@ -696,38 +790,38 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 @media screen and (max-width: 800px) and (max-width: 800px) {
-  .action__title {
+  .action__titles__title {
     font-size: 1.6rem;
     line-height: 3rem;
     letter-spacing: 0.05rem;
   }
 }
 
-.action__subtitle {
-  font-size: 3.2rem;
-  letter-spacing: .55rem;
-  line-height: 5rem;
-  color: white;
+@media screen and (max-width: 480px) {
+  .action__titles__title {
+    display: none;
+  }
+}
+
+.action__titles__subtitle {
+  font-size: 2.4rem;
+  line-height: 4rem;
   font-weight: bold;
   margin-top: 48px;
   margin-bottom: 24px;
+  text-align: center;
 }
 
 @media screen and (max-width: 800px) {
-  .action__subtitle {
-    font-size: 3.2rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .action__subtitle {
-    font-size: 2.4rem;
-    line-height: 3.5rem;
+  .action__titles__subtitle {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    letter-spacing: 0.05rem;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .action__subtitle {
+  .action__titles__subtitle {
     font-size: 1.6rem;
     letter-spacing: 0.1rem;
     line-height: 3rem;
@@ -735,30 +829,29 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
 }
 
-.action__text {
+.action__titles__text {
   font-size: 2.4rem;
   line-height: 4rem;
-  color: white;
   font-weight: 100;
   margin-bottom: 48px;
   text-align: center;
 }
 
 @media screen and (max-width: 800px) {
-  .action__text {
+  .action__titles__text {
     font-size: 1.6rem;
     line-height: 3rem;
     letter-spacing: 0.05rem;
   }
 }
 
-.action__download {
+.action__titles__download {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 90px;
-  width: 450px;
-  background-color: white;
+  height: 80px;
+  width: 60%;
+  background-color: #F5AB53;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -766,32 +859,35 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 10px;
+  border-radius: 50px;
+  text-decoration: none;
+  -webkit-box-shadow: 0 10px 10px 0 #FDEBBE;
+          box-shadow: 0 10px 10px 0 #FDEBBE;
 }
 
 @media screen and (max-width: 480px) {
-  .action__download {
-    width: 260px;
+  .action__titles__download {
+    width: 80%;
   }
 }
 
-.action__download__title {
+.action__titles__download__title {
   text-align: center;
   font-size: 2.4rem;
   line-height: 4rem;
   font-weight: bold;
-  color: #45A2E0;
+  color: white;
 }
 
 @media screen and (max-width: 800px) {
-  .action__download__title {
+  .action__titles__download__title {
     font-size: 1.6rem;
     line-height: 3rem;
     letter-spacing: 0.05rem;
   }
 }
 
-.action__download__icon {
+.action__titles__download__icon {
   font-size: 2.4rem;
   line-height: 4rem;
   color: #45A2E0;
@@ -799,7 +895,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 @media screen and (max-width: 800px) {
-  .action__download__icon {
+  .action__titles__download__icon {
     font-size: 1.6rem;
     line-height: 3rem;
     letter-spacing: 0.05rem;
@@ -807,16 +903,16 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 @media screen and (max-width: 480px) {
-  .action__download__icon {
+  .action__titles__download__icon {
     display: none;
   }
 }
 
-.action__contact {
+.action__titles__contact {
   border-radius: 10px;
   border: 2px solid white;
   height: 48px;
-  width: 450px;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -830,12 +926,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 @media screen and (max-width: 480px) {
-  .action__contact {
-    width: 260px;
+  .action__titles__contact {
+    width: 80%;
   }
 }
 
-.action__contact__title {
+.action__titles__contact__title {
   color: white;
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
@@ -843,14 +939,18 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 .active-bg {
+  background-color: #FFFDDD;
   margin-top: 200px;
-  background: -webkit-linear-gradient(0deg, #378ACE, #4EB3ED, #4EB3ED);
 }
 
 @media screen and (max-width: 800px) {
   .active-bg {
-    margin-top: 120px;
     margin-bottom: 16px;
   }
+}
+
+.top-active-bg {
+  background-color: #FFFDDD;
+  margin-top: -1px;
 }
 /*# sourceMappingURL=action.css.map */

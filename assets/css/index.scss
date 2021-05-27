@@ -4,77 +4,133 @@ $subtitleTop: $spacing-4;
 
 
 .top{
-	width: 100%;
-	background-color: gray;
-	background: linear-gradient(to right, rgba(34, 128, 204, 1) 0%, rgba(78, 179, 237, 0.7) 100%),url('../images/top_bg.png');
-	background-repeat: no-repeat;
+	background-image: url(/assets/images/top_bg.png);
 	background-size: cover;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-bottom: $spacing-8;
-
-	&__visual{
+	width: 100%;
+	height: 130vh;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	@include responsive(sp){
 		display: flex;
-		flex-direction: row;
-		margin-bottom: $spacing-10;
+		justify-content: center;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 115vh;
+	}
+	&__titles{
+		width: 80%;
+		height: 60%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 $spacing-6;
 		@include responsive(tab){
-			justify-content: center;
+			height: 40%;
 		}
-		&__left{
-			height: 100%;
-			width: 70%;
+		@include responsive(sp){
+			padding: 0;
+			align-items: flex-start;
+			width: 90%;
+			height: auto;
+		}
+		&__title1{
+			color: white;
+			font-size: 3.5vw;
+			line-height: 4vw;
+			@include responsive(tab){
+				font-size: 4vw;
+				line-height: 5vw;
+				margin: $spacing-1 0 $spacing-3 0;
+			}
+			@include responsive(sp){
+				@include font(24);
+			}
+		}
+		&__title2{
+			// @include font(100);
+			color: white;
+			margin: $spacing-4 0 $spacing-8 0;
+			font-size: 8vw;
+			@include responsive(tab){
+				font-size: 8vw;
+				line-height: 9vw;
+				margin: $spacing-1 0 $spacing-3 0;
+			}
+			@include responsive(sp){
+				@include font(48);
+				line-height: 5rem;
+			}
+		}
+		&__title3{
+			font-size: 2.5vw;
+			line-height: 3vw;
+			color: white;
+			@include responsive(tab){
+				font-size: 3vw;
+				line-height: 4vw;
+			}
+			@include responsive(sp){
+				@include font(16);
+			}
+		}
+	}
+
+	&__batchs{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
+		box-sizing: border-box;
+		@include responsive(tab){
+			height:auto;
+		}
+		&__box{
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
 			align-items: center;
-			margin-top: $spacing-10;
+			justify-content: center;
+			width: 60%;
 			@include responsive(tab){
-				width: 90%;
+				width: 100%
 			}
-			&__container{
-				width: 100%;
-				padding-left: $spacing-11;
-				z-index: 10;
+			&__title{
+				// @include font(32);
+				color: white;
+				margin-bottom: $spacing-3;
+				font-size: 2vw;
+
 				@include responsive(tab){
-					padding: 0;
-				}
-				&__title{
-					@include font(48);
-					font-weight: bold;
-					color: white;
-					margin-bottom: $spacing-2;
-					@include responsive(tab){
-						@include font(32);
-					}
-				}
-				&__subtitle{
-					width: 60%;
-					@include responsive(tab){
-						width: 100%;
-					}
-				}
-				&__box{
-					display: flex;
-					margin-top: $spacing-8;
-					&__batch{
-						width: 30%;
-						object-fit: contain;
-						@include responsive(tab){
-							width: 45%;
-						}
-					}
+					@include font(24);
+					text-align: center;
+					margin-top: $spacing-4;
 				}
 			}
-		}
-		&__right{
-			height: 100%;
-			width: 30%;
-			display: flex;
-			justify-content: flex-end;
-			align-items: flex-start;
-			@include responsive(tab){
-				display: none;
+			&__button{
+				width: 40%;
+				height: 48px;
+				border-radius: 30px;
+				background-color: yellow;
+				margin-bottom: $spacing-6;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				&__text{
+					@include font(24);
+				}
+			}
+			&__icons{
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				margin-bottom: 8px;
+				    justify-content: center;
+				&__img{
+					width: 28%;
+					margin: 1%;
+				}
 			}
 		}
 	}
@@ -104,6 +160,10 @@ $subtitleTop: $spacing-4;
 				&__img{
 					width: 400px;
 					height: 400px;
+					@include responsive(tab){
+						width: 250px;
+						height: 250px;
+					}
 				}
 				&__arrow{
 					width: 80px;
@@ -115,10 +175,9 @@ $subtitleTop: $spacing-4;
 		&__subtitle{
 			@include font(16);
 			font-weight: 100;
-			// width: 80%;
 			width: calc(100% - 80px);
-			// margin: 0 auto;
-			background-color: red;
+			text-align: center;
+
 			&__text{
 				@include font(16);
 			}
@@ -591,7 +650,17 @@ $subtitleTop: $spacing-4;
 			margin-top: $spacing-10;
 			margin-bottom: $spacing-2;
 			@include responsive(tab){
+				display: none;
+			}
+		}
+		&__imgsp{
+			display: none;
+			@include responsive(tab){
+				display: inline;
+				width: 100%;
+				object-fit: cover;
 				margin-top: $subtitleTop;
+				margin-bottom: $spacing-2;
 			}
 		}
 		&__case{
