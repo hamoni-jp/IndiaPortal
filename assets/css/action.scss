@@ -14,6 +14,7 @@ $buttonWidth-sp : 80%;
 	@include responsive(tab){
 		padding: $spacing-2 0;
 		width: 100%;
+		display: none;
 	}
 	&__img{
 		width: 20%;

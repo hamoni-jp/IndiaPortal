@@ -117,6 +117,9 @@ $subtitleTop: $spacing-4;
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				@include responsive(sp){
+					width: 60%;
+				}
 				&__text{
 					@include font(24);
 				}
@@ -675,21 +678,29 @@ $subtitleTop: $spacing-4;
 
 			&__number{
 				background: -webkit-linear-gradient(0deg, #378ACE, #4EB3ED ,#4EB3ED);//背景色にグラデーションを指定
-				@include font(16);
-				padding: 6px $spacing-2;
+				width: 100px;
 				border-radius: 25px;
-				color: white;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				@include responsive(sp){
 					padding: 3px $spacing-1;
 					@include font(12);
 				}
+				&__text{
+					color: white;
+					@include font(16);
+				}
 			}
 			&__text{
-				margin-left: $spacing-3;
+				padding-left: $spacing-3;
+				box-sizing: border-box;
+				width: 80%;
 				@include font(16);
 				@include responsive(tab){
 					margin-left: 0;
 					@include font(12);
+					width: 100%;
 				}
 			}
 		}

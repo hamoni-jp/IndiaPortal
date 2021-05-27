@@ -905,6 +905,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
           justify-content: center;
 }
 
+@media screen and (max-width: 480px) {
+  .top__batchs__box__button {
+    width: 60%;
+  }
+}
+
 .top__batchs__box__button__text {
   font-size: 2.4rem;
   line-height: 4rem;
@@ -1971,12 +1977,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 .fee__box__case__number {
   background: -webkit-linear-gradient(0deg, #378ACE, #4EB3ED, #4EB3ED);
-  font-size: 1.6rem;
-  letter-spacing: 0.1rem;
-  line-height: 3rem;
-  padding: 6px 16px;
+  width: 100px;
   border-radius: 25px;
-  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 480px) {
@@ -1988,8 +1999,18 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
 }
 
+.fee__box__case__number__text {
+  color: white;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  line-height: 3rem;
+}
+
 .fee__box__case__text {
-  margin-left: 24px;
+  padding-left: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 80%;
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
   line-height: 3rem;
@@ -2001,6 +2022,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 1.2rem;
     letter-spacing: .1rem;
     line-height: 2.5rem;
+    width: 100%;
   }
 }
 
