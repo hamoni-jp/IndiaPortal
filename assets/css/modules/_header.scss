@@ -1,0 +1,86 @@
+
+.header{
+	padding: 0 0 0 $spacing-6;
+	position: sticky;
+	top: 0;
+	background-color: white;
+	height: 10vh;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	z-index: 100;
+	box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+	@include responsive(pc){
+		display: none;
+	}
+	&__content{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-weight: bold;
+		&__right{
+			display: flex;
+			color: black;
+			align-items: center;
+			height: 10vh;
+			&__download{
+				text-align: left;
+				background: linear-gradient(to right, rgba(34, 128, 204, 1) 0%, rgba(78, 179, 237, 1) 100%);
+				margin: 0;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				padding: 0 $spacing-2;
+				&__title{
+					@include font(12);
+					color: white;
+					margin-right: $spacing-1;
+				}
+				&__icon{
+					color: white;
+					@include font(16);
+				}
+			}
+			&__contact{
+				text-align: left;
+				margin: 0;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				padding: 0 $spacing-2;
+				&__title{
+					@include font(16);
+					color: #45A2E0;
+					margin-right: $spacing-1;
+				}
+				&__icon{
+					color: #45A2E0;
+					@include font(16);
+				}
+			}
+		}
+
+		&__left{
+			display: flex;
+			flex-direction: row;
+			list-style: none;
+			justify-content: center;
+			align-items: center;
+			&__li{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+				margin: 0 $spacing-2;
+				margin-right: $spacing-3;
+				&__text{
+					@include font(12);
+					text-decoration: none;
+					color: black;
+				}
+			}
+		}
+
+	}
+}

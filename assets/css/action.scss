@@ -1,0 +1,100 @@
+@import "common";
+
+
+$buttonWidth : 450px;
+$buttonWidth-sp : 260px;
+
+.action{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: $spacing-8 0;
+	@include responsive(tab){
+		padding: $spacing-2 0;
+		width: 100%;
+	}
+	&__title{
+		@include font(32);
+		color: white;
+		font-weight: bold;
+		@include responsive(tab){
+			@include font(24);
+			text-align: center
+		}
+	}
+	&__subtitle{
+		@include font(32);
+		color: white;
+		font-weight: bold;
+		margin-top: $spacing-6;
+		margin-bottom: $spacing-3;
+		@include responsive(tab){
+			@include font(16);
+			margin-top: $spacing-3;
+		}
+	}
+	&__text{
+		@include font(24);
+		color: white;
+		font-weight: 100;
+		margin-bottom: $spacing-6;
+		text-align: center
+	}
+	&__download{
+		display: flex;
+		height: 90px;
+		width: $buttonWidth;
+		background-color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 10px;
+		@include responsive(sp){
+			width: $buttonWidth-sp;
+		}
+		&__title{
+			text-align: center;
+			@include font(24);
+			font-weight: bold;
+			color: #45A2E0;
+		}
+		&__icon{
+			@include font(24);
+			color: #45A2E0;
+			margin-left: $spacing-2;
+			@include responsive(sp){
+				display: none;
+			}
+		}
+	}
+	&__contact{
+		border-radius: 10px;
+		border: 2px solid white;
+		height: 48px;
+		width: $buttonWidth;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: $spacing-2;
+		@include responsive(sp){
+			width: $buttonWidth-sp;
+		}
+		&__title{
+			color: white;
+			@include font(16);
+			
+		}
+	}
+}
+
+.active-bg{
+	margin-top: $spacing-11;
+	background: -webkit-linear-gradient(0deg, #378ACE, #4EB3ED ,#4EB3ED);//背景色にグラデーションを指定
+	@include responsive(tab){
+		margin-top: 120px;
+		margin-bottom: $spacing-2;
+
+	}
+}

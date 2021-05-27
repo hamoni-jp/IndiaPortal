@@ -1,0 +1,744 @@
+@import "common";
+
+$subtitleTop: $spacing-4;
+
+
+.top{
+	width: 100%;
+	background-color: gray;
+	background: linear-gradient(to right, rgba(34, 128, 204, 1) 0%, rgba(78, 179, 237, 0.7) 100%),url('../images/top_bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: $spacing-8;
+
+	&__visual{
+		display: flex;
+		flex-direction: row;
+		margin-bottom: $spacing-10;
+		@include responsive(tab){
+			justify-content: center;
+		}
+		&__left{
+			height: 100%;
+			width: 70%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-top: $spacing-10;
+			@include responsive(tab){
+				width: 90%;
+			}
+			&__container{
+				width: 100%;
+				padding-left: $spacing-11;
+				z-index: 10;
+				@include responsive(tab){
+					padding: 0;
+				}
+				&__title{
+					@include font(48);
+					font-weight: bold;
+					color: white;
+					margin-bottom: $spacing-2;
+					@include responsive(tab){
+						@include font(32);
+					}
+				}
+				&__subtitle{
+					width: 60%;
+					@include responsive(tab){
+						width: 100%;
+					}
+				}
+				&__box{
+					display: flex;
+					margin-top: $spacing-8;
+					&__batch{
+						width: 30%;
+						object-fit: contain;
+						@include responsive(tab){
+							width: 45%;
+						}
+					}
+				}
+			}
+		}
+		&__right{
+			height: 100%;
+			width: 30%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-start;
+			@include responsive(tab){
+				display: none;
+			}
+		}
+	}
+}
+
+.follow{
+	overflow-x: auto;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+	padding: 0 20%;
+	@include responsive(tab){
+		padding: 0%;
+	}
+	&__thumbnail{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		display: inline-block;
+		&__top{
+			display: flex;
+			&__imgbox{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				&__img{
+					width: 400px;
+					height: 400px;
+				}
+				&__arrow{
+					width: 80px;
+					height: 80px;
+					margin-bottom: $spacing-8;
+				}
+			}
+		}
+		&__subtitle{
+			@include font(16);
+			font-weight: 100;
+			width: 80%;
+			background-color: red;
+			&__text{
+				@include font(16);
+			}
+		}
+	}
+}
+
+.reason{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	@include responsive(tab){
+		margin-top: $subtitleTop;
+	}
+	&__figure{
+		width: 80%;
+		object-fit: cover;
+		box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+		border: 1px solid $gray;
+		margin-bottom: $spacing-5;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: $spacing-4 0;
+		border-radius: 5px;
+		@include responsive(tab){
+			flex-direction: column;
+			padding: $spacing-2 0;
+			width: 90%;
+		}
+		&__left{
+			width: 40%;
+			border: 1px solid $gray;
+			@include responsive(tab){
+				width: 90%;
+			}
+		}
+		&__right{
+			width: 40%;
+			@include responsive(tab){
+				width: 90%;
+			}
+		}
+	}
+	&__section{
+		width: 80%;
+		height: 280px;
+		border-radius: 200px;
+		background-color: white;
+		border: 5px solid $blue;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin-bottom: $spacing-5;
+		@include responsive(tab){
+			border-radius: 20px;
+			height: auto;
+			padding: $spacing-2;
+		}
+		&__titles{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			width: 80%;
+			@include responsive(tab){
+				width: 100%;
+				align-items: center;
+			}
+			&__title{
+				@include font(40);
+				color: $blue;
+				@include responsive(tab){
+					text-align: center
+				}
+			}
+			&__subtitle{
+				@include font(16);
+				margin-top: $spacing-3;
+				width: 90%;
+				font-weight: 100;
+				color: black;
+			}
+		}
+	}
+}
+
+.shop{
+
+	&__reverse{
+		flex-direction: row-reverse;
+	}
+	&__row{
+		flex-direction: row;
+		@include responsive(tab){
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__container{
+		display: flex;
+		height: 500px;
+		@include responsive(tab){
+			flex-direction: column;
+			align-items: center;
+		}
+		&__left{
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			@include responsive(tab){
+				width: 90%;
+				height: 80%;
+			}
+			@include responsive(sp){
+				height: auto;
+			}
+			&__box{
+				width: 60%;
+				@include responsive(tab){
+					width: 90%;
+				}
+				&__title{
+					@include font(40);
+					background: -webkit-linear-gradient(0deg, #378ACE, #4EB3ED ,#4EB3ED);//背景色にグラデーションを指定
+					-webkit-background-clip: text;//テキストでくり抜く
+					-webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+					text-align: center
+				}
+				&__subtitle{
+					@include font(16);
+					margin-top: $spacing-3;
+					@include responsive(tab){
+						margin-top: $spacing-1;
+					}
+				}
+			}
+		}
+		&__right{
+			width: 50%;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			@include responsive(tab){
+				width: 100%;
+				height: 80%;
+			}
+			&__reverse{
+				justify-content: flex-start;
+			}
+			&__img{
+				width: 90%;
+				object-fit: contain;
+				position: absolute;
+				@include responsive(tab){
+					width: 100%;
+				}
+			}
+			&__bg{
+				height: 100%;
+				width: 70%;
+				position: absolute;
+				&__gradation{
+					background-image: url('../images/flipkart-bg.png');
+					background-repeat: no-repeat;
+					background-position: right;
+				}
+				&__gradationR{
+					background-image: url('../images/amazon-bg.png');
+					background-repeat: no-repeat;
+					background-position: left;
+				}
+			}
+		}
+	}
+
+}
+
+.market{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: $spacing-5;
+	flex-direction: column;
+	&__box{
+		width: 65%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		@include responsive(tab){
+			width: 90%;
+		}
+		&__img{
+				width: 100%;
+				object-fit: cover;
+				box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+				border-radius: 10px;
+				border: 2px solid #EDEDED;
+				margin: $spacing-6 0;
+				@include responsive(tab){
+					margin: $spacing-2 0;
+				}
+			}
+
+
+		&__pencil{
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: $spacing-10;
+			flex-direction: column;
+			@include responsive(tab){
+				margin-top: $spacing-2;
+			}
+			&__title{
+				@include font(24);
+				margin-bottom: $spacing-5;
+				font-weight: bold;
+				text-align: center;
+				@include responsive(tab){
+					margin-bottom: $spacing-2;
+				}
+			}
+			&__img{
+				width: 100%;
+				box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+				border-radius: 10px;
+				border: 2px solid #EDEDED;
+			}
+			&__message{
+					margin-top: $spacing-4;
+					@include font(40);
+					background: -webkit-linear-gradient(0deg, #378ACE, #4EB3ED ,#4EB3ED);//背景色にグラデーションを指定
+					-webkit-background-clip: text;//テキストでくり抜く
+					-webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+					@include responsive(tab){
+						text-align: center;
+					}
+			}
+		}
+	}
+
+}
+
+.wall{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	&__container{
+		width: 80%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		margin-top: $spacing-10;
+		@include responsive(tab){
+			display: inline;
+			margin-top: $spacing-4;
+		}
+		&__box{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 30%;
+			margin: $spacing-3;
+			@include responsive(tab){
+				width: 95%;
+				margin: 0;
+			}
+
+			&__img{
+				width: 100%;
+				object-fit: cover;
+				box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+				border-radius: 10px;
+			}
+			&__title{
+				@include font(24);
+				margin-top: $spacing-5;
+				@include responsive(tab){
+					margin-top: $spacing-2;
+				}
+			}
+			&__subtitle{
+				@include font(16);
+				margin-top: $spacing-2;
+				text-align: center;
+				@include responsive(tab){
+					margin-bottom: $spacing-6;
+				}
+			}
+		}
+	}
+}
+
+.support{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&__box{
+		width: 80%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		@include responsive(tab){
+			width: 80%;
+		}
+		@include responsive(sp){
+			width: 90%;
+		}
+		&__img{
+			width: 45%;
+			object-fit: cover;
+			box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .1);
+			border-radius: 10px;
+			border: 2px solid #EDEDED;
+			margin: $spacing-2;
+			@include responsive(tab){
+				width: 100%;
+				margin: $spacing-1;
+			}
+		}
+	}
+}
+
+.sale{
+	width: 100%;
+	background: -webkit-linear-gradient(0deg, #EEF7FF , #FDFEFE ,white);
+	background-image: url(/assets/images/sale-bg.png);
+	background-repeat: no-repeat;
+	&__box{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: $spacing-8;
+		@include responsive(tab){
+			flex-direction: column;
+			padding-top: $subtitleTop;
+		}
+		&__right{
+			width: 50%;
+			@include responsive(tab){
+				width: 90%
+			}
+			&__title{
+				@include font(32);
+				background: -webkit-linear-gradient(0deg, #378ACE, #4EB3ED ,#4EB3ED);//背景色にグラデーションを指定
+				-webkit-background-clip: text;//テキストでくり抜く
+				-webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+				@include responsive(tab){
+					text-align: center;
+				}
+			}
+			&__section{
+				display: flex;
+				flex-direction: row;
+				margin: $spacing-6 0;
+				@include responsive(tab){
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+				&__img{
+					width: 120px;
+					height: 120px;
+					margin-right: $spacing-2;
+					@include responsive(sp){
+						margin: 0
+					}
+				}
+				&__titles{
+					@include responsive(tab){
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
+					}
+					&__title{
+						@include font(24);
+						font-weight: bold;
+						color: $blue;
+						text-align: left;
+
+						margin-top: $spacing-2;
+					}
+					&__date{
+						@include font(16);
+						color: $blue;
+						margin-top: $spacing-2;
+					}
+					&__text{
+						@include font(12);
+						@include responsive(tab){
+							width: 60%;
+						}
+						@include responsive(sp){
+							width: 90%;
+						}
+					}
+				}
+			}
+		}
+		&__left{
+			width: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include responsive(tab){
+				width: 60%;
+			}
+			@include responsive(tab){
+				width: 80%;
+			}
+			&__img{
+				width: 60%;
+				object-fit: cover;
+				@include responsive(tab){
+					width: 90%;
+					margin-bottom: $spacing-4;
+				}
+			}
+		}
+	}
+}
+
+.fee{
+	width: 100%;
+	position: relative;
+	height: 850px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	@include responsive(tab){
+		height: auto;
+	}
+	&__bg{
+		position: absolute;
+		height: 100%;
+		width: 60%;
+		z-index: -10;
+		left: 0;
+		background-image: url(/assets/images/sale-bg.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+	&__box{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 70%;
+		@include responsive(tab){
+			width: 90%;
+		}
+		&__img{
+			width: 100%;
+			margin-top: $spacing-10;
+			margin-bottom: $spacing-2;
+			@include responsive(tab){
+				margin-top: $subtitleTop;
+			}
+		}
+		&__case{
+			width: 100%;
+			display: flex;
+			align-items: center;
+			margin: $spacing-1 0;
+			@include responsive(tab){
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			&__number{
+				background: -webkit-linear-gradient(0deg, #378ACE, #4EB3ED ,#4EB3ED);//背景色にグラデーションを指定
+				@include font(16);
+				padding: 6px $spacing-2;
+				border-radius: 25px;
+				color: white;
+				@include responsive(sp){
+					padding: 3px $spacing-1;
+					@include font(12);
+				}
+			}
+			&__text{
+				margin-left: $spacing-3;
+				@include font(16);
+				@include responsive(tab){
+					margin-left: 0;
+					@include font(12);
+				}
+			}
+		}
+	}
+}
+
+.simulation{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__img{
+			width: 80%;
+			object-fit: contain;
+			box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .2);
+			margin: $spacing-3 0;
+			@include responsive(tab){
+				width: 90%;
+				margin: $spacing-1 0;
+			}
+	}
+	&__box{
+		width: 80%;
+		@include responsive(tab){
+			width: 90%;
+		}
+		&__text{
+			@include font(16);
+			margin-top: $spacing-2;
+			color: #A5A5A5;
+			@include responsive(tab){
+				@include font(12);
+			}
+		}
+	}
+}
+
+.company{
+	width: 100%;
+	background: -webkit-linear-gradient(0deg, #EEF7FF , #FDFEFE ,white);
+	background-image: url('/assets/images/company-bg.png');
+	padding: $spacing-10 0;
+	background-position:bottom;
+	background-repeat: no-repeat;
+	@include responsive(tab){
+		background-size: cover;
+		padding:0;
+	}
+	&__box{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 500px;
+		@include responsive(tab){
+			flex-direction: column;
+			height: inherit;
+		}
+		&__left{
+			width: 50%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: column;
+			height: 100%;
+			margin-top: $spacing-2;
+			@include responsive(tab){
+				width: 90%;
+				margin-top: 0;
+			}
+			&__titles{
+				width: 80%;
+				display: flex;
+				flex-direction: row;
+				margin: $spacing-3 0;
+				@include responsive(tab){
+					width: 100%;
+				}
+				&__title{
+					@include font(16);
+					width: 150px;
+				}
+				&__subtitle{
+					@include font(16);
+					width: 300px;
+				}
+			}
+		}
+		&__right{
+			width: 50%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: $spacing-3 0;
+			box-sizing: border-box;
+			@include responsive(tab){
+				width: 90%;
+			}
+
+			&__texts{
+				width: 80%;
+				height: 100%;
+				@include responsive(tab){
+					width: 100%;
+					margin-bottom: $spacing-8;
+				}
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+				flex-direction: column;
+				margin-bottom: $spacing-1;
+
+				&__title{
+					@include font(16);
+					margin-bottom: $spacing-1;
+				}
+				&__text{
+					@include font(16);
+				}
+			}
+		}
+	}
+}

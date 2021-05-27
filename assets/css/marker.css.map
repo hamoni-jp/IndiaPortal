@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,AAAA,OAAO,CAAA;EACpB,mBAAmB,EAAE,UAAU;CAClC;;AACD,AAAA,iBAAiB,CAAC;EACd,gBAAgB,EAAE,2DAA2D;EAC7E,gBAAgB,EAAE,wDAAwD;EAC1E,gBAAgB,EAAE,uDAAuD;EACzE,gBAAgB,EAAE,sDAAsD;EACxE,gBAAgB,EAAE,mDAAmD;EACrE,iBAAiB,EAAE,QAAQ;EAC3B,eAAe,EAAE,SAAS;EAC1B,mBAAmB,EAAE,MAAM;EAC3B,UAAU,EAAE,WAAW;EACvB,WAAW,EAAE,IAAI;CAEpB",
+    "sources": [
+        "marker.scss"
+    ],
+    "names": [],
+    "file": "marker.css"
+}

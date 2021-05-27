@@ -1,0 +1,88 @@
+.titles{
+	margin-top: $spacing-11;
+	margin-bottom: $spacing-10;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	@include responsive(tab){
+		margin-bottom: $spacing-2;
+		margin-top: $spacing-8;
+	}
+	&__bigtitle{
+		@include responsive(tab){
+			font-size: 5vw !important;
+			letter-spacing: 1vw !important;
+		}
+	}
+	&__title{
+		// display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: center;
+		@include font(56);
+		color: $blue;//非対応のブラウザでの文字色を設定
+		background: -webkit-linear-gradient(0deg, #378ACE, #4EB3ED ,#4EB3ED);//背景色にグラデーションを指定
+		-webkit-background-clip: text;//テキストでくり抜く
+		-webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+		@include responsive(tab){
+			font-size: 8vw;
+			line-height: 10vw;
+		}
+
+
+		&__impact{
+			font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+			font-size: 120px;
+			margin-bottom: -10px;
+			line-height: normal;
+		}
+	}
+	&__subtitle{
+		@include font(24);
+		text-align: center;
+		margin-top: $spacing-4;
+		font-weight: bold;
+		width: 70%;
+		@include responsive(tab){
+			@include font(16);
+			width: 85%;
+		}
+	}
+}
+
+.negative{
+	margin-top: $spacing-11;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	@include responsive(tab){
+		margin-top: $spacing-8;
+		margin-bottom: $spacing-2;
+	}
+	&__title{
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: center;
+		@include font(56);
+		color: white;//非対応のブラウザでの文字色を設定
+		background: -webkit-linear-gradient(0deg, #45469F ,#6869F5);
+		padding: $spacing-2;
+		@include responsive(tab){
+			font-size: 8vw;
+			line-height: 10vw;
+			text-align: center;
+		}
+	}
+	&__subtitle{
+		@include font(16);
+		text-align: center;
+		margin-top: $spacing-4;
+		font-weight: 100;
+	}
+}

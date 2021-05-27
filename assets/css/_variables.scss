@@ -1,0 +1,33 @@
+// カラー
+$white: #FFFFFF;
+$orange: #FF5F46;
+$blue: #5DA1DB;
+$gray: #EBEBEB;
+// $lightOrange: rgba(255,95,70, .1);
+// $placeholderOrange :#FF5F46;
+// $brown: #5A2F2F;
+// $gray: #C7C2C2;
+
+//スペース
+$spacing-0: 0px;
+$spacing-1: 8px;
+$spacing-2: 16px;
+$spacing-3: 24px;
+$spacing-4: 32px;
+$spacing-5: 40px;
+$spacing-6: 48px;
+$spacing-7: 56px;
+$spacing-8: 64px;
+$spacing-9: 72px;
+$spacing-10: 80px;
+$spacing-11: 200px;
+$spacing-12: 400px;
+
+$breakpoints: (
+  'sp': (max-width: 480px),
+  'tab': (max-width: 800px),
+  'pc': (max-width: 1024px),
+) !default;
+
+
+$contentIndex: 3000;
