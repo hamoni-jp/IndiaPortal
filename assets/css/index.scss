@@ -115,7 +115,9 @@ $subtitleTop: $spacing-4;
 		&__subtitle{
 			@include font(16);
 			font-weight: 100;
-			width: 80%;
+			// width: 80%;
+			width: calc(100% - 80px);
+			// margin: 0 auto;
 			background-color: red;
 			&__text{
 				@include font(16);
