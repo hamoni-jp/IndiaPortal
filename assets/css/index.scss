@@ -10,23 +10,24 @@ $subtitleTop: $spacing-4;
 	height: 130vh;
 	background-repeat: no-repeat;
 	background-position: bottom;
-	@include responsive(sp){
+	@include responsive(tab){
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 115vh;
+		height: auto;
+		margin-top: $spacing-10;
 	}
 	&__titles{
 		width: 80%;
-		height: 60%;
+		height: 40%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		padding: 0 $spacing-6;
 		@include responsive(tab){
-			height: 40%;
+			padding: $spacing-4;
 		}
 		@include responsive(sp){
 			padding: 0;
@@ -36,7 +37,7 @@ $subtitleTop: $spacing-4;
 		}
 		&__title1{
 			color: white;
-			font-size: 3.5vw;
+			font-size: 3vw;
 			line-height: 4vw;
 			@include responsive(tab){
 				font-size: 4vw;
@@ -48,10 +49,9 @@ $subtitleTop: $spacing-4;
 			}
 		}
 		&__title2{
-			// @include font(100);
 			color: white;
 			margin: $spacing-4 0 $spacing-8 0;
-			font-size: 8vw;
+			font-size: 6vw;
 			@include responsive(tab){
 				font-size: 8vw;
 				line-height: 9vw;
@@ -63,7 +63,7 @@ $subtitleTop: $spacing-4;
 			}
 		}
 		&__title3{
-			font-size: 2.5vw;
+			font-size: 2vw;
 			line-height: 3vw;
 			color: white;
 			@include responsive(tab){
@@ -112,16 +112,18 @@ $subtitleTop: $spacing-4;
 				height: 48px;
 				border-radius: 30px;
 				background-color: yellow;
-				margin-bottom: $spacing-6;
+				margin-bottom: $spacing-10;
 				text-decoration: none;
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .8);
 				@include responsive(sp){
 					width: 60%;
 				}
 				&__text{
 					@include font(24);
+					font-weight: bold;
 				}
 			}
 			&__icons{
@@ -129,10 +131,15 @@ $subtitleTop: $spacing-4;
 				display: flex;
 				flex-direction: row;
 				margin-bottom: 8px;
-				    justify-content: center;
+				justify-content: center;
+				@include responsive(sp){
+					// flex-direction: column;
+				}
 				&__img{
 					width: 28%;
+					height: 28%;
 					margin: 1%;
+					object-fit: contain;
 				}
 			}
 		}
@@ -145,6 +152,11 @@ $subtitleTop: $spacing-4;
 	// white-space: nowrap;
 	-webkit-overflow-scrolling: touch;
 	padding: 0 20%;
+	-ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none;       /* Firefox 対応 */
+	&::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+        display:none;
+    }
 	@include responsive(tab){
 		padding: 0%;
 	}
@@ -786,6 +798,12 @@ $subtitleTop: $spacing-4;
 				&__subtitle{
 					@include font(16);
 					width: 300px;
+					a{
+						color: $black;
+						text-decoration: none;
+						text-decoration: none;
+						font-size: 16px !important;
+					}
 				}
 			}
 		}

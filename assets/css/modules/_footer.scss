@@ -5,6 +5,17 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	@include responsive(tab){
+	}
+	&__copyright{
+		display: none;
+		@include responsive(tab){
+			display: inline;
+			@include font(16);
+			color: white;
+			font-weight: bold;
+		}
+	}
 	&__box{
 		justify-content: space-between;
 		align-items: flex-start;

@@ -1,23 +1,6 @@
 .hamburger {
 	display: none;
 
-	&.active {
-		span {
-			&:nth-of-type(1) {
-				transform: translateY(10.5px) rotate(45deg);
-				background-color: white;
-			}
-			&:nth-of-type(2) {
-				opacity: 0;
-				background-color: white;
-			}
-			&:nth-of-type(3) {
-				transform: translateY(-10.5px) rotate(-45deg);
-				background-color: white;
-			}
-		}
-	}
-
 	@include responsive(pc) {
 		display: flex;
 		z-index: 109000;
@@ -25,14 +8,18 @@
 		top: 0px;
 		cursor: pointer;
 		width: 32px;
-		height: 40px;
 		background-color: white;
 		width: 100%;
-		height: 60px;
+		height: $spacing-10;
 		justify-content: space-between;
+
 		&__left{
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			&__img{
-				height: 100%;
+				height: 50px;
 				object-fit: cover;
 			}
 		}
@@ -49,6 +36,7 @@
 					@include font(12);
 					color: white;
 					font-weight: bold;
+					text-decoration: none;
 				}
 			}
 			&__contact{
@@ -61,6 +49,7 @@
 					@include font(12);
 					color: $blue;
 					font-weight: bold;
+					text-decoration: none;
 				}
 			}
 		}
@@ -81,6 +70,7 @@
 	background-size: cover;
 	z-index: 10000;
 	position: fixed;
+	display: inline-block;
 	top: 0;
 	left: 0;
 

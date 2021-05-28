@@ -14,7 +14,6 @@ $buttonWidth-sp : 80%;
 	@include responsive(tab){
 		padding: $spacing-2 0;
 		width: 100%;
-		display: none;
 	}
 	&__img{
 		width: 20%;
@@ -109,20 +108,34 @@ $buttonWidth-sp : 80%;
 			}
 		}
 		&__contact{
-			border-radius: 10px;
-			border: 2px solid white;
-			height: 48px;
+			display: flex;
+			height: 80px;
 			width: $buttonWidth;
+			border: 2px solid $orange;
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			border-radius: 50px;
+			text-decoration: none;
+			box-shadow: 0 10px 10px 0 #FDEBBE;
+			background-color: white;
 			margin-top: $spacing-2;
 			@include responsive(sp){
 				width: $buttonWidth-sp;
 			}
 			&__title{
-				color: white;
-				@include font(16);
+				text-align: center;
+				@include font(24);
+				font-weight: bold;
+				color: $orange;
+			}
+			&__icon{
+				@include font(24);
+				color: #45A2E0;
+				margin-left: $spacing-2;
+				@include responsive(sp){
+					display: none;
+				}
 			}
 		}
 	}
