@@ -82,7 +82,8 @@ $buttonWidth-sp : 80%;
 			display: flex;
 			height: 80px;
 			width: $buttonWidth;
-			background-color: $orange;
+			border: 2px solid $orange;
+			background-color: $white;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -96,7 +97,7 @@ $buttonWidth-sp : 80%;
 				text-align: center;
 				@include font(24);
 				font-weight: bold;
-				color: white;
+				color: $orange;
 			}
 			&__icon{
 				@include font(24);
@@ -111,14 +112,13 @@ $buttonWidth-sp : 80%;
 			display: flex;
 			height: 80px;
 			width: $buttonWidth;
-			border: 2px solid $orange;
+			background-color: $orange;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			border-radius: 50px;
 			text-decoration: none;
 			box-shadow: 0 10px 10px 0 #FDEBBE;
-			background-color: white;
 			margin-top: $spacing-2;
 			@include responsive(sp){
 				width: $buttonWidth-sp;
@@ -127,7 +127,7 @@ $buttonWidth-sp : 80%;
 				text-align: center;
 				@include font(24);
 				font-weight: bold;
-				color: $orange;
+				color: white;
 			}
 			&__icon{
 				@include font(24);

@@ -865,7 +865,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   display: flex;
   height: 80px;
   width: 60%;
-  background-color: #F5AB53;
+  border: 2px solid #F5AB53;
+  background-color: #FFFFFF;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -890,7 +891,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 2.4rem;
   line-height: 4rem;
   font-weight: bold;
-  color: white;
+  color: #F5AB53;
 }
 
 @media screen and (max-width: 800px) {
@@ -928,7 +929,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   display: flex;
   height: 80px;
   width: 60%;
-  border: 2px solid #F5AB53;
+  background-color: #F5AB53;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -940,7 +941,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   text-decoration: none;
   -webkit-box-shadow: 0 10px 10px 0 #FDEBBE;
           box-shadow: 0 10px 10px 0 #FDEBBE;
-  background-color: white;
   margin-top: 16px;
 }
 
@@ -955,7 +955,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 2.4rem;
   line-height: 4rem;
   font-weight: bold;
-  color: #F5AB53;
+  color: white;
 }
 
 @media screen and (max-width: 800px) {
